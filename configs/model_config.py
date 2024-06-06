@@ -74,8 +74,8 @@ embedding_model_dict = embedding_model_dict or update_config.get("embedding_mode
 embedding_model_dict = embedding_model_dict or {
     "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
     "ernie-base": "nghuyong/ernie-3.0-base-zh",
-    "text2vec-base": "/kaggle/working/codefuse-chatbot/embedding_models/text2vec-base-chinese",
-    #"text2vec-base": "shibing624/text2vec-base-chinese",
+    #"text2vec-base": "/kaggle/working/codefuse-chatbot/embedding_models/text2vec-base-chinese",
+    "text2vec-base": "shibing624/text2vec-base-chinese",
     "text2vec": "GanymedeNil/text2vec-large-chinese",
     "text2vec-paraphrase": "shibing624/text2vec-base-chinese-paraphrase",
     "text2vec-sentence": "shibing624/text2vec-base-chinese-sentence",
@@ -119,8 +119,8 @@ llm_model_dict = json.loads(os.environ.get("llm_model_dict")) if os.environ.get(
 llm_model_dict = llm_model_dict or update_config.get("llm_model_dict")
 llm_model_dict = llm_model_dict or {
     "chatglm-6b": {
-        "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
-       # "local_model_path": "THUDM/chatglm2-6b",
+       # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
+        "local_model_path": "THUDM/chatglm2-6b",
         "api_base_url": "http://localhost:8888/v1",  # "name"修改为fastchat服务中的"api_base_url"
         "api_key": "EMPTY"
     },
