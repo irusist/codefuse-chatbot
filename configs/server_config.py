@@ -57,8 +57,8 @@ SDFILE_API_SERVER = {
 # fastchat openai_api server
 FSCHAT_OPENAI_API = {
     "host": DEFAULT_BIND_HOST,
-    "port": 8888,  # model_config.llm_model_dict中模型配置的api_base_url需要与这里一致。
-    "docker_port": 8888,  # model_config.llm_model_dict中模型配置的api_base_url需要与这里一致。
+    "port": 8899,  # model_config.llm_model_dict中模型配置的api_base_url需要与这里一致。
+    "docker_port": 8899,  # model_config.llm_model_dict中模型配置的api_base_url需要与这里一致。
 }
 
 # nebula conf

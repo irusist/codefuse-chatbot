@@ -121,7 +121,7 @@ llm_model_dict = llm_model_dict or {
     "chatglm-6b": {
        # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
         "local_model_path": "THUDM/chatglm2-6b",
-        "api_base_url": "http://localhost:8888/v1",  # "name"修改为fastchat服务中的"api_base_url"
+        "api_base_url": "http://localhost:8899/v1",  # "name"修改为fastchat服务中的"api_base_url"
         "api_key": "EMPTY"
     },
     # 以下模型经过测试可接入，配置仿照上述即可
