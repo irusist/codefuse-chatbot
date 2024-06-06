@@ -4,8 +4,8 @@ logs
 llm_models
 embedding_models
 jupyter_work
-model_config.py
-server_config.py
+#model_config.py
+#server_config.py
 internal_start.py
 code_base
 .DS_Store
