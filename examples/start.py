@@ -222,7 +222,7 @@ def start_api_service(sandbox_host=DEFAULT_BIND_HOST):
         if check_process("sdfile_api.py"):
             subprocess.Popen(sdfile_sh, shell=True)
         
-        subprocess.Popen(webui_sh, shell=True)
+        subprocess.Popen(webui_sh)
 
         logger.info("You can please open http://localhost:8501 to use chatbot!")
 
