@@ -74,8 +74,8 @@ embedding_model_dict = embedding_model_dict or update_config.get("embedding_mode
 embedding_model_dict = embedding_model_dict or {
     "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
     "ernie-base": "nghuyong/ernie-3.0-base-zh",
-    #"text2vec-base": "/kaggle/working/codefuse-chatbot/embedding_models/text2vec-base-chinese",
-    "text2vec-base": "shibing624/text2vec-base-chinese",
+    "text2vec-base": "/kaggle/working/codefuse-chatbot/embedding_models/text2vec-base-chinese",
+    #"text2vec-base": "shibing624/text2vec-base-chinese",
     "text2vec": "GanymedeNil/text2vec-large-chinese",
     "text2vec-paraphrase": "shibing624/text2vec-base-chinese-paraphrase",
     "text2vec-sentence": "shibing624/text2vec-base-chinese-sentence",
