@@ -47,6 +47,8 @@ except:
 # add your openai key
 os.environ["API_BASE_URL"] = os.environ.get("API_BASE_URL") or update_config.get("API_BASE_URL") or OPENAI_API_BASE
 os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY") or update_config.get("OPENAI_API_KEY") or "sk-xx"
+os.environ["API_BASE_URL"] = "https://api.chatanywhere.tech/v1"
+os.environ["OPENAI_API_KEY"] = "sk-d8Z6FyFUNMfx704lRi0mQ16VwqIrPu2M2Cg65EJe9ERSylvh"
 openai.api_key = os.environ["OPENAI_API_KEY"]
 # os.environ["OPENAI_PROXY"] = "socks5h://127.0.0.1:13659"
 os.environ["DUCKDUCKGO_PROXY"] = os.environ.get("DUCKDUCKGO_PROXY") or update_config.get("DUCKDUCKGO_PROXY") or "socks5h://127.0.0.1:13659"
@@ -60,6 +62,7 @@ EMBEDDING_ENGINE = os.environ.get("EMBEDDING_ENGINE") or update_config.get("EMBE
 EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL") or update_config.get("EMBEDDING_MODEL") or "text2vec-base"
 LLM_MODEL = os.environ.get("LLM_MODEL") or "gpt-3.5-turbo"
 LLM_MODEL = "chatglm-6b"
+LLM_MODEL = "gpt-3.5-turbo"
 LLM_MODELs = [LLM_MODEL]
 USE_FASTCHAT = "gpt" not in LLM_MODEL # 判断是否进行fastchat
 
@@ -156,6 +159,11 @@ llm_model_dict = llm_model_dict or {
     },
     "gpt-4": {
         "local_model_path": "gpt-4",
+        "api_base_url": os.environ.get("API_BASE_URL"),
+        "api_key": os.environ.get("OPENAI_API_KEY")
+    },
+    "gpt-4o": {
+        "local_model_path": "gpt-4o",
         "api_base_url": os.environ.get("API_BASE_URL"),
         "api_key": os.environ.get("OPENAI_API_KEY")
     },
