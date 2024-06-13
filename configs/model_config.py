@@ -62,7 +62,7 @@ EMBEDDING_ENGINE = os.environ.get("EMBEDDING_ENGINE") or update_config.get("EMBE
 EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL") or update_config.get("EMBEDDING_MODEL") or "text2vec-base"
 LLM_MODEL = os.environ.get("LLM_MODEL") or "gpt-3.5-turbo"
 LLM_MODEL = "glm-4-9b-chat"
-LLM_MODEL = "gpt-3.5-turbo"
+#LLM_MODEL = "gpt-3.5-turbo"
 LLM_MODELs = [LLM_MODEL]
 USE_FASTCHAT = "gpt" not in LLM_MODEL # 判断是否进行fastchat
 
