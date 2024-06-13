@@ -61,7 +61,7 @@ os.environ["log_verbose"] = "2"
 EMBEDDING_ENGINE = os.environ.get("EMBEDDING_ENGINE") or update_config.get("EMBEDDING_ENGINE") or 'model'  # openai or model
 EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL") or update_config.get("EMBEDDING_MODEL") or "text2vec-base"
 LLM_MODEL = os.environ.get("LLM_MODEL") or "gpt-3.5-turbo"
-LLM_MODEL = "chatglm-6b"
+LLM_MODEL = "glm-4-9b-chat"
 LLM_MODEL = "gpt-3.5-turbo"
 LLM_MODELs = [LLM_MODEL]
 USE_FASTCHAT = "gpt" not in LLM_MODEL # 判断是否进行fastchat
@@ -124,6 +124,12 @@ llm_model_dict = llm_model_dict or {
     "chatglm-6b": {
        # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
         "local_model_path": "THUDM/chatglm2-6b",
+        "api_base_url": "http://localhost:8899/v1",  # "name"修改为fastchat服务中的"api_base_url"
+        "api_key": "EMPTY"
+    },
+    "glm-4-9b-chat": {
+       # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
+        "local_model_path": "THUDM/glm-4-9b-chat",
         "api_base_url": "http://localhost:8899/v1",  # "name"修改为fastchat服务中的"api_base_url"
         "api_key": "EMPTY"
     },
