@@ -97,7 +97,7 @@ FSCHAT_MODEL_WORKERS = FSCHAT_MODEL_WORKERS or {
         "port": 20002,
         "device": LLM_DEVICE,
         # todo: 多卡加载需要配置的参数
-        "gpus": None,
+        "gpus": "0,1",
         "numgpus": 2,
         # 以下为非常用参数，可根据需要配置
         # "max_gpu_memory": "20GiB",
