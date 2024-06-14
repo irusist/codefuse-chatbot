@@ -63,7 +63,7 @@ EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL") or update_config.get("EMBEDD
 LLM_MODEL = os.environ.get("LLM_MODEL") or "gpt-3.5-turbo"
 LLM_MODEL = "glm-4-9b-chat"
 #LLM_MODEL = "gpt-3.5-turbo"
-LLM_MODEL = "qwen2-7b"
+#LLM_MODEL = "qwen2-7b"
 LLM_MODELs = [LLM_MODEL]
 USE_FASTCHAT = "gpt" not in LLM_MODEL # 判断是否进行fastchat
 
