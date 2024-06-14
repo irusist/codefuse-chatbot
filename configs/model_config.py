@@ -63,6 +63,7 @@ EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL") or update_config.get("EMBEDD
 LLM_MODEL = os.environ.get("LLM_MODEL") or "gpt-3.5-turbo"
 LLM_MODEL = "glm-4-9b-chat"
 #LLM_MODEL = "gpt-3.5-turbo"
+LLM_MODEL = "qwen2-7b"
 LLM_MODELs = [LLM_MODEL]
 USE_FASTCHAT = "gpt" not in LLM_MODEL # 判断是否进行fastchat
 
@@ -130,6 +131,12 @@ llm_model_dict = llm_model_dict or {
     "glm-4-9b-chat": {
        # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
         "local_model_path": "THUDM/glm-4-9b-chat",
+        "api_base_url": "http://localhost:8899/v1",  # "name"修改为fastchat服务中的"api_base_url"
+        "api_key": "EMPTY"
+    },
+    "qwen2-7b": {
+       # "local_model_path": "/kaggle/working/codefuse-chatbot/llm_models/chatglm2-6b",
+        "local_model_path": "Qwen/Qwen2-7B",
         "api_base_url": "http://localhost:8899/v1",  # "name"修改为fastchat服务中的"api_base_url"
         "api_key": "EMPTY"
     },
